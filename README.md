@@ -2,8 +2,7 @@
 
 ## Summary
 
-For this project I used the ultrasonic sensor to obtain information about the distance of an object from the sensor. I then mapped this information into a playable range, and send this to sonic-pi. 
-
+This project consists in the sonification of distance of a surface from an ultrasonic sensor. Distance data is then transformed into an audible MIDI note which in turn is played by the Sonic-pi
 ![ultrasonic_sensor_image](ultrasonic_sensor.jpg)
 
 ## Description
@@ -14,12 +13,14 @@ The ultrasonic sensor is plugged into the Raspberry pi ports and receives 5V pow
 
 A useful tutorial on how to assemble the circuit and a slightly different architecture of voltage dividers could be found [here](https://thepihut.com/blogs/raspberry-pi-tutorials/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi).
 
-The sonic-pi can be played on the raspberry pi. However, I find easier to play the sonic-pi from my laptop, and this is why the data is sent to a different IP address
+For this project I used the ultrasonic sensor to obtain information about the distance of an object from the sensor. I then mapped this information into a playable range, and send this to Sonic-pi. 
+
+The Sonic-pi can be played on the raspberry pi. However, I find easier to play the Sonic-pi from my laptop, and this is why the data is sent to a different IP address. 
 
 ## Used hardware
 1. Breadboard
 2. 3 x  1 Ohm resistor, 1 0 Ohm resistor
-3. Ultrasonic sensor
+3. HC-SRO4 ultrasonic sensor 
 4. Raspberry pi power supply
 5. Dupont wires
 6. Optional: base for holding your ultrasonic sensor - I recycled an used pepper container and covered it with papier-mâché
