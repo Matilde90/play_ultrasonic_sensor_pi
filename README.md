@@ -20,7 +20,7 @@ As Sonic-pi listens on port 4560, I used the python-osc library to send MIDI dat
 
 ### Used hardware
 1. Breadboard
-2. 3 x  1 Ohm resistor, 1 0 Ohm resistor
+2. 3 x  1 Ohm resistor, 1 x 0 Ohm resistor
 3. HC-SRO4 ultrasonic sensor 
 4. Raspberry pi power supply
 5. Dupont wires
