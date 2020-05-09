@@ -2,7 +2,7 @@
 
 ## Summary
 
-This project consists in the sonification of distance of a surface from an ultrasonic sensor. Distance data is then transformed into an audible MIDI note which in turn is played by the Sonic-pi
+This project consists in the sonification of distance of a surface from an ultrasonic sensor. Distance data is then transformed into an audible MIDI note which in turn is played by the Sonic-pi.
 ![ultrasonic_sensor_image](ultrasonic_sensor.jpg)
 
 ## Description
@@ -15,7 +15,7 @@ A useful tutorial on how to assemble the circuit and a slightly different archit
 
 For this project I used the ultrasonic sensor to obtain information about the distance of an object from the sensor. I then mapped this information into a playable range, and send this to Sonic-pi. 
 
-The Sonic-pi can be played on the raspberry pi. However, I find easier to play the Sonic-pi from my laptop, and this is why the data is sent to a different IP address. 
+As sonic-pi listens on port 4560, I used the python-osc library to send MIDI data to the sonic-pi. 
 
 ## Used hardware
 1. Breadboard
@@ -25,9 +25,9 @@ The Sonic-pi can be played on the raspberry pi. However, I find easier to play t
 5. Dupont wires
 6. Optional: base for holding your ultrasonic sensor - I recycled an used pepper container and covered it with papier-mâché
 
-### Useful commands to work with the raspberry pi:
+#### Useful commands to work with the raspberry pi:
 
-- How to transfer files from your computer to the raspberry pi via ssh
+- I found useful to work entirely from my laptop, enabling an ssh connection to the raspberry pi. Once the ssh connection is enabled, I copy data from my computer to the raspberry pi via the scp command.
 
 ```bash
 scp -i ~/.ssh/<your-raspberry-pi-private-key>  \
