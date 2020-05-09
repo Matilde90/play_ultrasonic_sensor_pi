@@ -1,4 +1,4 @@
-# Playing the ultrasonic sensor sound
+# Sound of distance - using ultrasonic sensor
 
 ## Summary
 
@@ -16,7 +16,7 @@ A useful tutorial on how to assemble the circuit and a slightly different archit
 
 For this project I used the ultrasonic sensor to obtain information about the distance of an object from the sensor. I then mapped this information into a playable range, and send this to Sonic-pi. 
 
-As Sonic-pi listens on port 4560, I used the python-osc library to send MIDI data to the sonic-pi. The documentation on receiving OSC messages could be found [here](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/tutorial/12.1-Receiving-OSC.md)
+As Sonic-pi listens on port 4560, I used the python-osc library to send MIDI data to the sonic-pi. The documentation on receiving OSC messages could be found [here](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/tutorial/12.1-Receiving-OSC.md).
 
 ## Used hardware
 1. Breadboard
@@ -28,7 +28,7 @@ As Sonic-pi listens on port 4560, I used the python-osc library to send MIDI dat
 
 #### Useful commands to work with the raspberry pi:
 
-- I found useful to work entirely from my laptop, enabling an ssh connection to the raspberry pi. Once the ssh connection is enabled, I copy data from my computer to the raspberry pi via the scp command.
+- I found useful to work entirely from my laptop, enabling an ssh connection to comunicate to the raspberry pi. Once the ssh connection is enabled, I copy data from my computer to the raspberry pi via the scp command.
 
 ```bash
 scp -i ~/.ssh/<your-raspberry-pi-private-key>  \
