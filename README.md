@@ -16,7 +16,7 @@ A useful tutorial on how to assemble the circuit and a slightly different archit
 
 For this project I used the ultrasonic sensor to obtain information about the distance of an object from the sensor. I then mapped this information into a playable range, and send this to Sonic-pi. 
 
-As sonic-pi listens on port 4560, I used the python-osc library to send MIDI data to the sonic-pi. 
+As Sonic-pi listens on port 4560, I used the python-osc library to send MIDI data to the sonic-pi. The documentation on receiving OSC messages could be found [here](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/tutorial/12.1-Receiving-OSC.md)
 
 ## Used hardware
 1. Breadboard
