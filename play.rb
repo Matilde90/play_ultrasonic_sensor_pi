@@ -3,9 +3,13 @@
 
 live_loop :hollow do
   use_real_time
-  a, b = sync "/osc*/trigger/hollow"
-  #  adding 50 to ensure that music stays within the audible range
-  d= a.to_f + 50
-  puts d
-  synth :hollow, note: d, sustain: b
+  a, b, c= sync "/osc*/trigger/hollow"
+  puts a
+  synth :hollow, note: a, attack: 5, release: 5 - c
+  sleep rrand(0.5, 1.5, 1, 2)
+  synth :hollow, note: a + 3, attack: 3, release: 6 - c
+  sleep rrand(0.5, 1.5, 1, 2)
+  if one_in(3)
+    synth :hollow, note: a + 6, attack: 3, release: 3
+  end
 end
