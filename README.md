@@ -3,6 +3,7 @@
 ## Summary
 
 This project consists in the sonification of distance of a surface from an ultrasonic sensor. Distance data is then transformed into an audible MIDI note which in turn is played by the Sonic-pi.
+
 ![ultrasonic_sensor_image](ultrasonic_sensor.jpg)
 
 ## Description
