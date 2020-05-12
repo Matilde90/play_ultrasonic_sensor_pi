@@ -49,14 +49,18 @@ while True:
         midi = 85
     if (distance < 85):
         # map distances into playable values
-        midi = 7/6 * distance + 40
+        midi1 = 7/6 * distance + 40
+        midi2 = 7/6 * distance + 45
+        midi3 = -11/15 * distance + 70
     if (i > 4):
         i = 0
     else: 
         i = i + 1
-    print(midi)
-    sender.send_message('/trigger/hollow', [midi, 3.5, i])
-    time.sleep(2)
+    print(midi1)
+    print(midi2)
+    print(midi3)
+    sender.send_message('/trigger/hollow', [midi1, midi2, midi3, i])
+    time.sleep(3.2)
 
 GPIO.cleanup()
  

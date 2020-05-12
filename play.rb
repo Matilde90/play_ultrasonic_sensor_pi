@@ -3,13 +3,15 @@
 
 live_loop :hollow do
   use_real_time
-  a, b, c= sync "/osc*/trigger/hollow"
-  puts a
-  synth :hollow, note: a, attack: 5, release: 5 - c
+  midi1, midi2, midi3, i= sync "/osc*/trigger/hollow"
+  puts midi1
+  synth :hollow, note: midi1, attack: 5, release: 5 - i
   sleep rrand(0.5, 1.5, 1, 2)
-  synth :hollow, note: a + 3, attack: 3, release: 6 - c
+  synth :hollow, note: midi2, attack: 3, release: 5 - i
+  sleep rrand(0.5, 1.5, 1, 2)
+  synth :hollow, note: midi3, attack: 3, release: 5
   sleep rrand(0.5, 1.5, 1, 2)
   if one_in(3)
-    synth :hollow, note: a + 6, attack: 3, release: 3
+    synth :hollow, note: midi1 - 3, attack: 3, release: 3
   end
 end
